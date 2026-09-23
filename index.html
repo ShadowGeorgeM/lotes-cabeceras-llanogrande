@@ -15,11 +15,13 @@
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://shadowgeorgem.github.io/lotes-cabeceras-llanogrande/">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
-<title>Lotes 13 y 14 · Cabeceras de Llanogrande, Rionegro</title>
+<link rel="icon" type="image/png" sizes="64x64" href="img/ht-logo-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/ht-logo-180.png">
+<meta property="og:site_name" content="Hierro & Tierra · Trading & Activos Rurales">
+<title>Lotes 13 y 14 · Cabeceras de Llanogrande, Rionegro · Hierro &amp; Tierra</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Archivo:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500&family=Montserrat:wght@400;500;600&display=swap">
 
 <style>
 :root{
@@ -302,12 +304,100 @@ section{padding-block:clamp(52px,7vw,88px)}
   .together .t-left{flex:0 0 auto}
   .together .t-right{margin-left:0;text-align:left}
 }
+/* ===== Hierro & Tierra — tokens de marca (sobrescriben base.css) ===== */
+:root{
+  --paper:#F7F4EE;          /* arena */
+  --card:#FFFFFF;
+  --raise:#EFEAE0;
+  --ink:#202422;            /* antracita */
+  --ink-2:#3C4340;
+  --muted:#6B6F6A;
+  --line:#DDD6C8;
+  --line-soft:#E9E3D7;
+  --pasto:#1E3A2F;          /* verde bosque: acento principal */
+  --pasto-soft:#E6EBE4;
+  --oxido:#8C4327;          /* óxido / tierra */
+  --oro:#C5A059;            /* oro viejo */
+  --corteza:#C5A059;
+  --shadow:0 1px 2px rgba(32,36,34,.05), 0 8px 28px -18px rgba(32,36,34,.35);
+  --deep:#1E3A2F;           /* bloques oscuros: verde bosque */
+  --on-deep:#F7F4EE;
+  --on-deep-2:#D9D3C6;
+  --on-deep-3:#A9B3AB;
+  --deep-accent:#C5A059;    /* oro sobre verde */
+  --btn:#C5A059;
+  --btn-ink:#202422;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#202422; --card:#2A2F2C; --raise:#323734;
+    --ink:#F7F4EE; --ink-2:#D9D3C6; --muted:#A6A9A2;
+    --line:#3E443F; --line-soft:#353A37;
+    --pasto:#C5A059; --pasto-soft:#2E3A33;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#202422; --card:#2A2F2C; --raise:#323734;
+  --ink:#F7F4EE; --ink-2:#D9D3C6; --muted:#A6A9A2;
+  --line:#3E443F; --line-soft:#353A37;
+  --pasto:#C5A059; --pasto-soft:#2E3A33;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.9);
+}
+
+/* tipografía de marca */
+body{font-family:"Montserrat","Helvetica Neue",Arial,sans-serif;font-size:15.5px}
+h1,h2,h3,.fact b,.parcel-area,.price b,.together .t-price,.step b,.card h2,.card-facts b{font-family:"Playfair Display",Georgia,serif}
+.eyebrow,.parcel-tag,.plan-panel h3,.row dt,.card-tag,.axis,.step i{font-family:"Montserrat",sans-serif}
+.plan svg text{font-family:"Montserrat",sans-serif}
+.plan svg .s-big{font-family:"Playfair Display",Georgia,serif}
+
+/* botón: oro viejo sobre antracita */
+.btn-main{background:var(--oro);color:#202422}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--oro);outline-offset:3px}
+
+/* barra de marca */
+.brand-bar{background:#202422;border-bottom:2px solid var(--oro)}
+.brand-bar .wrap{display:flex;align-items:center;gap:14px;padding-block:10px}
+.brand-bar img{width:44px;height:44px;flex:0 0 auto}
+.brand-bar a{display:flex;align-items:center;gap:14px;text-decoration:none;color:#F7F4EE}
+.brand-name{font-family:"Playfair Display",Georgia,serif;font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.brand-sub{font-family:"Montserrat",sans-serif;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oro);margin-top:3px}
+.brand-bar .brand-right{margin-left:auto;font-family:"Montserrat",sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#A9B3AB}
+@media (max-width:620px){.brand-bar .brand-right{display:none}.brand-bar img{width:38px;height:38px}.brand-name{font-size:.95rem}}
+
+/* pie de marca */
+.brand-foot{background:#202422;color:#D9D3C6;padding-block:44px 40px;border-top:2px solid var(--oro)}
+.brand-foot .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:22px 28px;align-items:center}
+.brand-foot img{width:84px;height:84px}
+.brand-foot .brand-name{color:#F7F4EE;font-size:1.25rem}
+.brand-foot .brand-tagline{font-family:"Playfair Display",Georgia,serif;font-style:italic;font-size:1.05rem;color:#F7F4EE;margin-top:10px}
+.brand-foot .brand-meta{font-family:"Montserrat",sans-serif;font-size:.74rem;letter-spacing:.06em;color:#A9B3AB;line-height:1.7;text-align:right}
+.brand-foot a{color:var(--oro);text-decoration:none}
+@media (max-width:760px){.brand-foot .wrap{grid-template-columns:auto 1fr}.brand-foot .brand-meta{grid-column:1/-1;text-align:left}}
+
+/* la portada lleva el sello discreto en la esquina */
+.hero{position:relative}
+.hero img.hero-seal{position:absolute;inset:auto;top:18px;right:20px;width:64px;height:64px;min-height:0;object-fit:contain;filter:none;opacity:.92;z-index:2;grid-area:auto}
+@media (max-width:620px){.hero img.hero-seal{width:48px;height:48px;right:14px;top:14px}}
+@media print{.brand-bar,.brand-foot{background:#202422 !important}}
+
 </style>
 </head>
 <body>
+<header class="brand-bar">
+  <div class="wrap">
+    <a href="https://shadowgeorgem.github.io/fincas-en-venta/" aria-label="Hierro &amp; Tierra, portafolio">
+      <img src="img/ht-logo-256.png" width="44" height="44" alt="Monograma H&amp;T de Hierro &amp; Tierra">
+      <span><span class="brand-name">Hierro &amp; Tierra</span><span class="brand-sub" style="display:block">Trading &amp; Activos Rurales</span></span>
+    </a>
+    <span class="brand-right">Colombia</span>
+  </div>
+</header>
 <!-- ═══════════════ PORTADA ═══════════════ -->
 <header class="hero">
   <picture><source type="image/webp" srcset="img/foto1-900.webp 900w, img/foto1-1600.webp 1600w" sizes="100vw"><img src="img/foto1-1600.jpg" srcset="img/foto1-900.jpg 900w, img/foto1-1600.jpg 1600w" sizes="100vw" width="1600" height="535" fetchpriority="high" loading="eager" alt="Potrero abierto con ganado, guaduales y casas campestres al fondo, en el altiplano del Oriente antioqueño"></picture>
+  <img class="hero-seal" src="img/ht-logo-256.png" width="64" height="64" alt="">
   <div class="hero-veil"></div>
   <div class="hero-body">
     <div class="wrap">
@@ -601,5 +691,16 @@ section{padding-block:clamp(52px,7vw,88px)}
     </div>
   </div>
 </section>
+<footer class="brand-foot">
+  <div class="wrap">
+    <img src="img/ht-logo-256.png" width="84" height="84" alt="Monograma H&amp;T">
+    <div>
+      <span class="brand-name">Hierro &amp; Tierra</span>
+      <span class="brand-sub" style="display:block">Trading &amp; Activos Rurales</span>
+      <p class="brand-tagline">M&aacute;s que tierra, legado.</p>
+    </div>
+    <p class="brand-meta">Le atiende George Marroquin<br><a href="https://wa.me/573004903639">WhatsApp +57 300 490 3639</a><br><a href="https://shadowgeorgem.github.io/fincas-en-venta/">Ver todas las fincas</a></p>
+  </div>
+</footer>
 </body>
 </html>
